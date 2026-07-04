@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 | 상수 룸싸롱 예약 | 당신의 밤을 바꿀 선택</title>
+    <meta name="description" content="진짜를 원한다면? 상수 룸싸롱 예약의 모든 것. 010-6279-0862">
+    <meta name="keywords" content="상수 룸싸롱, 상수 룸싸롱 예약, 상수역 룸싸롱, 홍대 룸싸롱, 프리미엄 룸싸롱, 룸싸롱 블로그">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-ivory-ink">
+    <link rel="canonical" href="https://t3b08-ss-room-rsv.vercel.app/blog">
+    <meta property="og:title" content="상수 룸싸롱 예약 블로그 | 진짜들의 이야기">
+    <meta property="og:description" content="상수 룸싸롱 예약, 진짜를 원한다면. 010-6279-0862">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b08-ss-room-rsv.vercel.app/blog">
+    <meta property="og:image" content="https://t3b08-ss-room-rsv.vercel.app/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #faf8f5;
+            color: #2c2c2c;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.2rem;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-top: 2.5rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            margin-top: 1.8rem;
+        }
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        header {
+            background-color: #1a1a1a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            padding: 0 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .logo span {
+            color: #d4a853;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            padding: 0.25rem 0;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #d4a853;
+        }
+        .tel-link {
+            display: inline-flex;
+            align-items: center;
+            background-color: #d4a853;
+            color: #1a1a1a;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+        .tel-link:hover {
+            background-color: #c49a3f;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            padding: 5rem 0 4rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.8rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .blog-post {
+            padding: 4rem 0;
+        }
+        .blog-post .container {
+            max-width: 800px;
+        }
+        .blog-post .meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 2rem;
+            color: #888;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #e0dcd5;
+            padding-bottom: 1.2rem;
+        }
+        .blog-post .meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .blog-post .content h2 {
+            border-left: 4px solid #d4a853;
+            padding-left: 1rem;
+        }
+        .blog-post .content p {
+            color: #3a3a3a;
+        }
+        .blog-post .content blockquote {
+            border-left: 3px solid #d4a853;
+            padding: 1.2rem 1.8rem;
+            margin: 2rem 0;
+            background: #f0ece6;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #2c2c2c;
+        }
+        .blog-post .content ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+        .blog-post .content ul li {
+            margin-bottom: 0.6rem;
+            font-size: 1.05rem;
+            list-style-type: disc;
+        }
+        .blog-post .content strong {
+            color: #1a1a1a;
+        }
+        .cta-section {
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 3.5rem 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+            color: #ffffff;
+        }
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.8rem;
+            font-size: 1.1rem;
+        }
+        .cta-section .tel-link {
+            font-size: 1.2rem;
+            padding: 0.8rem 2.2rem;
+        }
+        footer {
+            background: #111;
+            color: rgba(255, 255, 255, 0.5);
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        footer a {
+            color: #d4a853;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .header-inner {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 12px 16px;
+            }
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                margin-top: 8px;
+            }
+            .tel-link {
+                font-size: 0.85rem;
+                padding: 0.4rem 1rem;
+            }
+            .blog-post .container {
+                padding: 0 16px;
+            }
+        }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">상수<span>룸싸롱</span></a>
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/about">소개</a></li>
+                <li><a href="/blog" class="active">블로그</a></li>
+                <li><a href="/faq">FAQ</a></li>
+            </ul>
+            <a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>블로그</h1>
+            <p>룸싸롱 예약, 진짜들의 이야기. 상수에서 가장 솔직한 목소리.</p>
+        </div>
+    </section>
+
+    <section class="blog-post">
+        <div class="container">
+            <article class="content">
+                <div class="meta">
+                    <span>📅 2025.03.15</span>
+                    <span>✍️ 상수룸싸롱 에디터</span>
+                    <span>📂 룸싸롱 인사이트</span>
+                </div>
+
+                <h1>상수 룸싸롱 예약, 왜 너는 계속 실패하는가?</h1>
+
+                <p><strong>솔직히 말해보자.</strong> 네가 지금까지 경험한 '룸싸롱 예약'은 다 거기서 거기였다. 전화 돌리고, 예약 넣고, 취소당하고. 반복되는 패턴에 지쳤다면? 이 글은 너를 위한 거다.</p>
+
+                <blockquote>
+                    "진짜는 말이 많지 않아. 행동으로 증명하지. 상수 룸싸롱 예약도 마찬가지야."
+                </blockquote>
+
+                <h2>1. 예약이 안 되는 이유, 네가 몰랐던 진실</h2>
+                <p>상수역 3분 거리. 위치는 완벽해. 문제는 거기서 끝이 아니야. <strong>프리미엄 룸싸롱</strong>이라는 말에 현혹되지 마. 진짜 프리미엄은 예약 시스템에서부터 시작된다. 우리는 010-6279-0862로 직접 연결되는 단 한 줄의 전화만 받는다. 왜? 간단해. 가짜는 걸러내고 진짜만 남기기 위해서.</p>
+
+                <ul>
+                    <li><strong>전화 한 통이면 끝</strong> - 복잡한 폼, 기다리는 시간 따위 없다.</li>
+                    <li><strong>취소율 0%</strong> - 예약은 곧 약속. 우리는 약속을 지킨다.</li>
+                    <li><strong>24시간 실시간 응대</strong> - 네가 원하는 시간, 우리는 거기 있다.</li>
+                </ul>
+
+                <h2>2. 홍대 룸싸롱? No, 상수 룸싸롱이다</h2>
+                <p>홍대는 가라. 진짜는 <strong>상수</strong>에 있다. 상수역 도보 3분, 이 조건 하나만으로도 가치는 증명된다. 네가 찾는 그 분위기, 그 서비스, 그 품격. 여기에 있다. 우리는 '홍대 룸싸롱'이라는 이름에 기대지 않는다. 우리는 <strong>상수 룸싸롱</strong> 그 자체다.</p>
+
+                <h2>3. 예약, 이렇게 하면 너도 VIP</h2>
+                <p>자, 이제 행동할 시간이다. 전화기를 들어. 010-6279-0862. 이 번호 하나로 네 밤이 바뀐다. <strong>룸싸롱 예약</strong>은 더 이상 스트레스가 아니다. 우리가 다 해결한다. 네가 할 일은 오직 전화 한 통 뿐.</p>
+
+                <blockquote>
+                    "예약은 간단해야 한다. 복잡하면 가짜야."
+                </blockquote>
+
+                <p>우리는 말로 때우지 않는다. 결과로 보여준다. <strong>프리미엄 룸싸롱</strong>의 기준을 직접 경험해봐. 상수에서 가장 완벽한 선택, 지금 당장 010-6279-0862로 전화해.</p>
+
+                <p style="margin-top: 2rem; font-weight: 700; font-size: 1.1rem;">👉 진짜를 원한다면? 전화는 이미 열려 있다.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>지금 바로 예약하세요</h2>
+            <p>상수역 도보 3분, 프리미엄 룸싸롱. 당신의 밤을 바꿀 선택.</p>
+            <a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>상수 룸싸롱 예약 | 010-6279-0862 | 상수역 도보 3분 | 프리미엄 룸싸롱</p>
+            <p style="margin-top: 0.5rem;">&copy; 2025 상수룸싸롱. All rights reserved. | <a href="/privacy">개인정보처리방침</a></p>
+        </div>
+    </footer>
+</body>
+</html>
